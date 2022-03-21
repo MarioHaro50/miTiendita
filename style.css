@@ -1,0 +1,214 @@
+* {
+    font-family: 'Montserrat';
+}
+body {
+    background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    border-bottom: 1px solid #111;
+}
+
+.titulo {
+    text-align: right;
+    padding-left: 60px;
+}
+
+.cajaProductos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.cajaProductos p, h3, h5, button {
+    margin: 5px 0;
+}
+
+.producto {
+    margin: 20px 30px;
+    width: 250px;
+    background-color:#333 ;
+    border-radius: 10px;
+    color: #a9b8c4;
+}
+
+.info-producto {
+    margin: 10px 15px;
+}
+
+.producto button {
+    float: right;
+}
+
+.producto img {
+    width: 250px;
+    height: 300px;
+}
+
+.submenu {
+    position: relative;
+    list-style:none;
+}
+
+.submenu img {
+    width: 40px;
+}
+
+.submenu #carrito{
+    display: none;
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.button {
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    background-color: #ff5252;
+    padding: 6px;
+}
+
+.button:hover {
+    background-color: #fc0000;
+}
+
+.tabla-carrito {
+    list-style:none;
+    width: 500px;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 0 0 1em 0;
+    caption-side: top;
+}
+
+.tabla-carrito caption, td, th {
+    padding: 0.6em;
+    border-bottom: 1px solid #888888;
+}
+
+.borrarCurso {
+    background-color: #f00;
+    text-decoration: none;
+    padding: 5px 9px;
+    border-radius: 100%;
+    color: #fff;
+}
+
+.total {
+    float: right;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+}
+
+.select label {
+    margin: 5px;
+}
+
+.alerta {
+    display: flex;
+    color: #fff;
+    text-align: center;
+    font-size: 100px;
+    height: 100%;
+}
+
+@media (max-width: 850px) {
+
+    .titulo {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .producto {
+        width: 300px;
+        margin: 20px 10px;
+    }
+
+    .producto img {
+        width: 300px;
+        height: 350px;
+    }
+
+    .tabla-carrito {
+        width: 400px;
+    }
+
+    .alerta {
+        font-size: 50px;
+    }
+}
+
+/* Spinner */
+
+.spinner {
+    margin: 100px auto 0;
+    width: 70px;
+    text-align: center;
+  }
+  
+  .spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+  
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }

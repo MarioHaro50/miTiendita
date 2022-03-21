@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Carrito de compras</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Mi carrito de compras</h1>
+        <div class="carrito-container">
+            <ul>
+                <li class="submenu">
+                <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" id="img-carrito">
+                <div id="carrito">
+                                
+                    <table id="lista-carrito" class="tabla-carrito">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    
+                    <p class="total">Total a pagar: <b>$0</b></p>
+
+                    <button href="#" id="vaciar-carrito" class="button">Vaciar Carrito</button>
+                    <!-- Spinner -->
+                    <div class="spinner" style="display:none">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="buscador">
+        <form id="buscador">
+            <div class="select">
+                <label for="platadorma">Plataforma</label>
+                <select class="u-full-width" id="plataforma">
+                    <option value="">Todo</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="Nintendo">Nintendo</option>
+                    <option value="Multiplataforma">Multiplataforma</option>
+                    <option value="PC">PC</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <section id="listaDeJuegos" class="cajaProductos">
+    </section>
+    <script src="carrito.js"></script>
+    <script src="db.js"></script>
+    <script src="productos.js"></script>
+</body>
+</html>
