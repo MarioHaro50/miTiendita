@@ -161,7 +161,8 @@ header {
     }
 
     .tabla-carrito {
-        width: 400px;
+        width: 350px;
+        font-size: 12px;
     }
 
     .alerta {
