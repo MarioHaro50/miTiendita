@@ -66,7 +66,8 @@ header {
 }
 
 .producto:hover {
-    width: 26rem;
+    background-color: var(--letras);
+    color: var(--negro);
 }
 
 .info-producto {
@@ -222,10 +223,6 @@ select {
         width: 21rem;
         height: 38rem;
         margin: 2rem 1rem;
-    }
-
-    .producto:hover {
-        width: 22rem;
     }
 
     .producto button {

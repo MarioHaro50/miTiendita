@@ -63,7 +63,7 @@ const juegos = [
     id: 9
   },
   {
-    nombre: 'Super Smash Bros: Brawl',
+    nombre: 'SSB: Brawl',
     precio: 50,
     consola: 'Nintendo',
     img: 'https://www.neoteo.com/wp-content/images/BC26.jpg',
