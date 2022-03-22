@@ -132,7 +132,7 @@ function addCarritoHTML() {
 
     row.innerHTML = `
     <td>
-      <img src="${imagen}" width="100">
+      <img src="${imagen}" width="150">
     </td>
     <td>
       ${nombre}
@@ -144,7 +144,7 @@ function addCarritoHTML() {
       ${cantidad}
     </td>
     <td>
-      <a href="#" class="borrarCurso" data-id=${id}>X</a>
+      <a href="#" class="borrarCurso" data-id=${id}>×</a>
     </td>`
     // Agrega el HTML del carrito en el tbody
     cuerpoTablaCarrito.appendChild(row);

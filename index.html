@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0d755bd5aa.js" crossorigin="anonymous"></script>
     <title>Carrito de compras</title>
 </head>
 <body>
     <header>
-        <h1 class="titulo">Mi carrito de compras</h1>
+        <h1 class="titulo">Tienda en línea</h1>
         <div class="carrito-container">
             <ul>
                 <li class="submenu">
-                <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" id="img-carrito">
+                <!-- <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" id="img-carrito"> -->
+                <svg id="img-carrito" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="52" height="52" viewBox="0 0 24 24" stroke-width="0.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="6" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M17 17h-11v-14h-2" />
+                    <path d="M6 5l14 1l-1 7h-13" />
+                  </svg>
                 <div id="carrito">
                                 
                     <table id="lista-carrito" class="tabla-carrito">
@@ -33,7 +41,18 @@
                     
                     <p class="total">Total a pagar: <b>$0</b></p>
 
-                    <button href="#" id="vaciar-carrito" class="button">Vaciar Carrito</button>
+                    <button href="#" id="vaciar-carrito" class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="0.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <line x1="4" y1="7" x2="20" y2="7" />
+                            <line x1="10" y1="11" x2="10" y2="17" />
+                            <line x1="14" y1="11" x2="14" y2="17" />
+                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                        </svg>
+
+                        Vaciar Carrito
+                    </button>
                     <!-- Spinner -->
                     <div class="spinner" style="display:none">
                         <div class="bounce1"></div>
@@ -62,6 +81,8 @@
     </div>
     <section id="listaDeJuegos" class="cajaProductos">
     </section>
+
+    <!--! JavaScript -->
     <script src="carrito.js"></script>
     <script src="db.js"></script>
     <script src="productos.js"></script>

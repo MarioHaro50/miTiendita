@@ -1,7 +1,13 @@
 * {
     font-family: 'Montserrat';
 }
+
+html {
+    font-size: 62.5%; /* Con esto, podemos hacer que 1rem sea igual a 10px*/
+}
+
 body {
+    font-size: 26px; /* Con esto, podemos hacer que 1rem sea igual a 10px*/
     background: #333333;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -12,34 +18,42 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 10px;
-    border-bottom: 1px solid #111;
+    margin: 1rem;
+    border-bottom: .1rem solid #111;
 }
 
 .titulo {
     text-align: right;
-    padding-left: 60px;
+    padding-left: 6rem;
+    font-size: 3.5rem;
 }
 
 .cajaProductos {
+    font-size: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: stretch;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 3rem;
 }
 
 .cajaProductos p, h3, h5, button {
-    margin: 5px 0;
+    margin: .5rem 0;
 }
 
 .producto {
-    margin: 20px 30px;
-    width: 250px;
+    margin: 2rem 3rem;
+    width: 25rem;
+    height: 42rem;
     background-color:#333 ;
-    border-radius: 10px;
+    border-radius: 1rem;
     color: #a9b8c4;
+    transition: all .5s;
+}
+
+.producto:hover {
+    width: 26rem;
 }
 
 .info-producto {
@@ -48,20 +62,55 @@ header {
 
 .producto button {
     float: right;
+    margin-top: -1rem;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    background-color: #da1818;
+    border-radius: .4rem;
+    border: none;
+    padding: .5rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-size:1.3rem;
+    text-align: center;
+    transition: all .5s;
+}
+
+.producto button:hover {
+    background-color: #ff5151;
+    color: #000;
+}
+
+.producto button:active {
+    background-color: #750000;
+    color: #fff;
 }
 
 .producto img {
-    width: 250px;
-    height: 300px;
+    display: block;
+    margin: auto;
+    width: 25rem;
+    height: 30rem;
+    transition: all 1s;
 }
 
 .submenu {
+    font-size: 1.6rem;
     position: relative;
     list-style:none;
 }
 
 .submenu img {
-    width: 40px;
+    width: 5rem;
+}
+
+#img-carrito {
+    width: 5rem;
+    transition: all .4s;
+}
+
+#img-carrito:hover {
+    width: 5.1rem;
 }
 
 .submenu #carrito{
@@ -76,41 +125,49 @@ header {
     top:100%;
     z-index: 1;
     background-color: white;
-    padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
+    padding: 2rem;
+    min-height: 40rem;
+    min-width: 3rem;
 }
 
 .button {
-    margin-top: 10px;
+    margin-top: 1rem;
     width: 100%;
     border: none;
     background-color: #ff5252;
-    padding: 6px;
+    padding: .6rem;
+    border-radius: .3rem;
+    transition: all .4s;
+    cursor: pointer;
 }
 
 .button:hover {
     background-color: #fc0000;
+    color: #fff;
+}
+
+.button:active {
+    background-color: #880000
 }
 
 .tabla-carrito {
     list-style:none;
-    width: 500px;
+    width: 50rem;
     border-collapse: collapse;
-    text-align: left;
-    margin: 0 0 1em 0;
+    text-align: center;
+    margin: 0 0 1.6rem 0;
     caption-side: top;
 }
 
 .tabla-carrito caption, td, th {
-    padding: 0.6em;
-    border-bottom: 1px solid #888888;
+    padding: .9rem;
+    border-bottom: .1rem solid #888888;
 }
 
 .borrarCurso {
     background-color: #f00;
     text-decoration: none;
-    padding: 5px 9px;
+    padding: .5rem .9rem;
     border-radius: 100%;
     color: #fff;
 }
@@ -123,24 +180,32 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 20px auto;
+    margin: 2rem auto;
 }
 
 .select {
     display: flex;
     flex-direction: column;
+    font-size: 1.8rem;
 }
 
 .select label {
-    margin: 5px;
+    margin: .5rem;
 }
 
 .alerta {
     display: flex;
     color: #fff;
     text-align: center;
-    font-size: 100px;
+    font-size: 10rem;
     height: 100%;
+}
+
+select {
+    background-color: #333333;
+    border: none;
+    border-radius: .4rem;
+    color:#a9b8c4;
 }
 
 @media (max-width: 850px) {
@@ -151,22 +216,51 @@ header {
     }
 
     .producto {
-        width: 300px;
-        margin: 20px 10px;
+        width: 21rem;
+        height: 38rem;
+        margin: 2rem 1rem;
+    }
+
+    .producto:hover {
+        width: 22rem;
+    }
+
+    .producto button {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: .2rem;
+        margin: .4rem auto;
+        text-align: center;
+    }
+
+    .producto h3 {
+        font-size: 1.5rem;
+    }
+    
+    .producto h5 {
+        font-size: 1.2rem;
+    }
+
+    .producto p {
+        font-size: 1.1rem;
     }
 
     .producto img {
-        width: 300px;
-        height: 350px;
+
+        display: block;
+        margin: auto;
+        transition: all 1s;
+        width: 21rem;
+        height: 25.5rem;
     }
 
     .tabla-carrito {
-        width: 310px;
-        font-size: 14px;
+        width: 31rem;
+        font-size: 1.4rem;
     }
 
     .alerta {
-        font-size: 50px;
+        font-size: 5rem;
     }
 }
 
