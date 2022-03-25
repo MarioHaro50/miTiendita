@@ -28,7 +28,7 @@ function cargarEventListeners() {
       carrito.splice(0);// Reseteamos el carrito
       limpiarHTML(); // Eliminamos todo el HTML
       localStorage.removeItem('carrito');
-      localStorage.removeItem('total');
+      localStorage.setItem('total','0');
       totalPagar.textContent = '$0';
       spinner.style.display = 'none';
     }, 2000);
