@@ -12,12 +12,10 @@
 }
 
 html {
-    font-size: 62.5%; /* Con esto, podemos hacer que 1rem sea igual a 10px*/
+    font-size: 62.25%; /* Con esto, podemos hacer que 1rem sea igual a 10px*/
 }
 
 body {
-    font-size: 26px; /* Con esto, podemos hacer que 1rem sea igual a 10px*/
-
     background: var(--principal);  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, var(--secundario), var(--principal));  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, var(--secundario), var(--principal)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -42,12 +40,11 @@ header {
 }
 
 .cajaProductos {
+    display: grid;
+    grid: auto / repeat(4, 1fr);
+    gap: 6rem;
+
     font-size: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: stretch;
-    flex-wrap: wrap;
     margin-top: 3rem;
 }
 
@@ -56,13 +53,12 @@ header {
 }
 
 .producto {
-    margin: 2rem 3rem;
-    width: 25rem;
-    height: 42rem;
+    justify-self: center;
     background-color: var(--principal);
     border-radius: 1rem;
     color: var(--letras);
     transition: all .5s;
+    width: 25rem;
 }
 
 .producto:hover {
@@ -211,6 +207,19 @@ select {
     color:var(--letras);
 }
 
+@media (max-width: 1250px) {
+    .cajaProductos {
+        grid: auto / repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .cajaProductos {
+        grid: auto / 40rem;
+    }
+}
+
 @media (max-width: 850px) {
 
     .carrito-container {
@@ -219,9 +228,14 @@ select {
         align-items: center;
     }
 
+    .cajaProductos {
+        grid: auto / repeat(2, 1fr);
+        gap: 1rem;
+    }
+
     .producto {
-        width: 21rem;
-        height: 38rem;
+        width: 24rem;
+        height: 41rem;
         margin: 2rem 1rem;
     }
 
@@ -250,8 +264,8 @@ select {
         display: block;
         margin: auto;
         transition: all 1s;
-        width: 21rem;
-        height: 25.5rem;
+        width: 24rem;
+        height: 28rem;
     }
 
     .tabla-carrito {

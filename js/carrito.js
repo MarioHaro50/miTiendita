@@ -17,7 +17,7 @@ function cargarEventListeners() {
   // Muestra los juegos en localStorage
   document.addEventListener('DOMContentLoaded', () => {
     carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    totalPagar.textContent =`$${localStorage.getItem('total')}` && '$0';
+    totalPagar.textContent =`$${localStorage.getItem('total')}`;
     addCarritoHTML();
   });
   
