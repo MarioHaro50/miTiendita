@@ -50,6 +50,7 @@ function agregarJuego(e) {
 
 // Eliminar un juego del carrito.
 function eliminarJuego(e) {
+  e.preventDefault();
   if(e.target.classList.contains('borrarCurso')) {
 
     // Obtenemos el ID del juego que queremos eliminar

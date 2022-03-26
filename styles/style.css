@@ -17,8 +17,8 @@ html {
 
 body {
     background: var(--principal);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--secundario), var(--principal));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, var(--secundario), var(--principal)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #880e0e, var(--principal));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #880e0e, var(--principal)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header {
@@ -56,15 +56,15 @@ header {
 .producto {
     justify-self: center;
     padding: .5rem;
-    border-left: .2px solid var(--negro);
-    border-right: .2px solid var(--negro);
+    outline: .2px solid var(--negro);
+    border-radius: .5rem;
     color: var(--letras);
     transition: all .5s;
     width: 25rem;
 }
 
 .producto:hover {
-    border: none;
+    outline: none;
     background-color: var(--letras);
     color: var(--negro);
 }
@@ -216,13 +216,17 @@ select {
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 580px) {
     .cajaProductos {
-        grid: auto / 40rem;
+        grid: auto / 1fr;
     }
 }
 
 @media (max-width: 850px) {
+
+    .titulo {
+        margin-bottom: 0;
+    }
 
     .carrito-container {
         padding: 0;
