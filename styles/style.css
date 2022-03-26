@@ -27,8 +27,9 @@ header {
 }
 
 .titulo {
+    margin-top: 5rem;
     text-align: center;
-    font-size: 6.5rem;
+    margin-bottom: -4rem;
 }
 
 .carrito-container {
@@ -54,14 +55,16 @@ header {
 
 .producto {
     justify-self: center;
-    background-color: var(--principal);
-    border-radius: 1rem;
+    padding: .5rem;
+    border-left: .2px solid var(--negro);
+    border-right: .2px solid var(--negro);
     color: var(--letras);
     transition: all .5s;
     width: 25rem;
 }
 
 .producto:hover {
+    border: none;
     background-color: var(--letras);
     color: var(--negro);
 }
@@ -87,13 +90,12 @@ header {
 }
 
 .producto button:hover {
-    background-color: #ff5151;
-    color: var(--negro);
+    background-color: #750000;
 }
 
 .producto button:active {
-    background-color: #750000;
-    color: #fff;
+    background-color: #ff4f4f;
+    color: #111111;
 }
 
 .producto img {
