@@ -218,7 +218,7 @@ select {
 
 @media (max-width: 580px) {
     .cajaProductos {
-        grid: auto / 1fr;
+        grid: auto / auto;
     }
 }
 
