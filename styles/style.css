@@ -7,15 +7,18 @@
     --blanco: #ffffff;
 }
 
-* {
-    font-family: 'Montserrat';
-}
-
 html {
+    box-sizing: border-box;
     font-size: 62.25%; /* Con esto, podemos hacer que 1rem sea igual a 10px*/
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
+    font-family: 'Montserrat';
+
     background: var(--principal);  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #880e0e, var(--principal));  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #880e0e, var(--principal)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -30,6 +33,24 @@ header {
     margin-top: 5rem;
     text-align: center;
     margin-bottom: -4rem;
+}
+
+.divImgCarrito {
+    display: flex;
+    flex-direction: row;
+}
+
+.numeroIcon {
+    align-self: flex-start;
+    margin-left: -1.3rem;
+    background-color: var(--letras);
+    border-radius: 50%;
+    padding: .1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .carrito-container {

@@ -6,6 +6,7 @@ const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');// El boton p
 const listaDeJuegos = document.querySelector('#listaDeJuegos');// Este es el div que contiene todos los juegos en venta
 let totalPagar = document.querySelector('.total b');
 const spinner = document.querySelector('.spinner');
+let numArticulos = document.querySelector('.numeroIcon');
 
 //* Funciones
 cargarEventListeners(); // Con este cargamos todos los eventos
@@ -30,6 +31,8 @@ function cargarEventListeners() {
       localStorage.removeItem('carrito');
       localStorage.setItem('total','0');
       totalPagar.textContent = '$0';
+      numArticulos.textContent = '0'
+      numArticulos.style.display = 'none';
       spinner.style.display = 'none';
     }, 2000);
   });
@@ -45,7 +48,7 @@ function agregarJuego(e) {
 
     leerDatosJuego(juegoSeleccionado); // Llamamos esta fucnión y le pasamos de parametro el div del juego con toda la info
   }
-  // console.log(carrito);
+  console.log(carrito);
 }
 
 // Eliminar un juego del carrito.
@@ -127,6 +130,8 @@ function addCarritoHTML() {
   // Limpiar HTML
   limpiarHTML();
 
+  let cantidadJuegos = 0;
+
   // Recorre el carrito y genera HTML
   carrito.forEach(juego => {
     const { imagen, nombre, precio, cantidad, id } = juego;
@@ -150,8 +155,17 @@ function addCarritoHTML() {
     </td>`
     // Agrega el HTML del carrito en el tbody
     cuerpoTablaCarrito.appendChild(row);
-
+    
+    cantidadJuegos += cantidad;
   });
+
+  
+  numArticulos.textContent = cantidadJuegos;
+  if(cantidadJuegos < 1) {
+    numArticulos.style.display = 'none';
+  } else {
+    numArticulos.style.display = 'inline'
+  }
 
   // Agregar el carrito al Storage
   addStorage();
