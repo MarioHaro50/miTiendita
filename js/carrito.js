@@ -40,7 +40,7 @@ function agregarJuego(e) {
 
   // if para que si el boton tiene la clase agregarAlCarrito, extraiga todo el div del mismo, y asi obtener la información, como el precio, la portada, etc.
   if (e.target.classList.contains('agregarAlCarrito')) {
-    const juegoSeleccionado = e.target.parentElement.parentElement;// Con esto extraes todo el div donde viene toda la inforación
+    const juegoSeleccionado = e.target.parentElement.parentElement.parentElement;// Con esto extraes todo el div donde viene toda la inforación
     // console.log(juegoSeleccionado);
 
     leerDatosJuego(juegoSeleccionado); // Llamamos esta fucnión y le pasamos de parametro el div del juego con toda la info
@@ -86,6 +86,7 @@ function eliminarJuego(e) {
 
 function leerDatosJuego(juego) {
   // Creamos un objeto con los datos del juego
+  console.log(juego.querySelector('img'));
   const infoJuego = {
     imagen: juego.querySelector('img').src,
     nombre: juego.querySelector('h3').textContent,

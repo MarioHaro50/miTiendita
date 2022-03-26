@@ -29,11 +29,13 @@ function mostrarJuegos(juegos) {
     
     juegoHTML.classList.add('producto');
     juegoHTML.innerHTML = `
-      <img src="${img}" alt="">
+      <img src="${img}" alt="juegoImg">
       <div class="info-producto">
         <h3>${nombre}</h3>
         <h5>${consola}</h5>
         <p>$<span>${precio}</span></p>
+        <div class="divBoton">
+          
         <button class="agregarAlCarrito" data-id="${id}">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-plus" width="28" height="28" viewBox="0 0 24 24" stroke-width="0.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -45,6 +47,8 @@ function mostrarJuegos(juegos) {
           </svg>
           Agregar al carrito
         </button>
+        
+        </div>
       </div>
     `;
 

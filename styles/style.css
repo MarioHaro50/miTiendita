@@ -43,10 +43,9 @@ header {
 .cajaProductos {
     display: grid;
     grid: auto / repeat(4, 1fr);
-    gap: 6rem;
+    gap: 4rem;
 
     font-size: 1.5rem;
-    margin-top: 3rem;
 }
 
 .cajaProductos p, h3, h5, button {
@@ -55,6 +54,8 @@ header {
 
 .producto {
     justify-self: center;
+    display: flex;
+    flex-direction: column;
     padding: .5rem;
     outline: .2px solid var(--negro);
     border-radius: .5rem;
@@ -73,11 +74,13 @@ header {
     margin: 10px 15px;
 }
 
-.producto button {
-    float: right;
+.divBoton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.divBoton button {
     margin-top: -1rem;
-    font-size: 1.6rem;
-    border-radius: .5rem;
     background-color: var(--secundario);
     border-radius: .4rem;
     border: none;
@@ -216,12 +219,6 @@ select {
     }
 }
 
-@media (max-width: 580px) {
-    .cajaProductos {
-        grid: auto / auto;
-    }
-}
-
 @media (max-width: 850px) {
 
     .titulo {
@@ -245,12 +242,15 @@ select {
         margin: 2rem 1rem;
     }
 
-    .producto button {
+    .divBoton {
+        justify-content: center;
+    }
+
+    .divBoton button {
         text-align: center;
         font-size: 1.2rem;
-        margin-top: .2rem;
-        margin: .4rem auto;
-        text-align: center;
+        margin: 0;
+        width: 100%;
     }
 
     .producto h3 {
@@ -266,10 +266,6 @@ select {
     }
 
     .producto img {
-
-        display: block;
-        margin: auto;
-        transition: all 1s;
         width: 24rem;
         height: 28rem;
     }
@@ -284,6 +280,25 @@ select {
     }
 }
 
+
+@media (max-width: 580px) {
+    .cajaProductos {
+        grid: auto / 1fr;
+        gap: .5rem;
+    }
+    
+    .producto img {
+        transition: all 1s;
+        width: 29rem;
+        height: 34rem;
+    }
+
+    .producto {
+        width: 30rem;
+        height: 47rem;
+        margin: 2rem 1rem;
+    }
+}
 /* Spinner */
 
 .spinner {
